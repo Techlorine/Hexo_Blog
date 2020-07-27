@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Techlorine&#39;s Temp Blog</title>
+  
+  <subtitle>爬爬爬，我最会爬了</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.xuediao.cf/"/>
+  <updated>2020-07-26T16:31:20.951Z</updated>
+  <id>http://www.xuediao.cf/</id>
+  
+  <author>
+    <name>Techlorine</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HEXO速成</title>
+    <link href="http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html"/>
+    <id>http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html</id>
+    <published>2020-07-27T06:57:59.000Z</published>
+    <updated>2020-07-26T16:31:20.951Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HEXO准备"><a href="#HEXO准备" class="headerlink" title="HEXO准备"></a>HEXO准备</h2><h3 id="配置文件更改"><a href="#配置文件更改" class="headerlink" title="配置文件更改"></a>配置文件更改</h3><p>先摸一个配置(<code>./_config.yml</code>)，再摸一个模板(<code>./scaffolds/pages.md</code>), 最后摸一个主题(<code>./theme</code>)。<br>主题直接<code>git clone</code>完事。<br>注意<a href="https://hexo.io/zh-cn/docs/front-matter" target="_blank" rel="noopener">Front-matter</a>中不允许带特殊符号(如@@)，否则yaml解析报错。</p><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo文档</a><br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题</a><br><a href="https://candinya.com/posts/Kratos-Rebirth/" target="_blank" rel="noopener">本Blog使用主题</a>  </p><h3 id="HEXO永久链接优化"><a href="#HEXO永久链接优化" class="headerlink" title="HEXO永久链接优化"></a>HEXO永久链接优化</h3><p>Hexo默认的永久链接过于冗长且对中文不友好。因此参见以下资料更改永久链接。<br>为写入模板，使用<code>TAGabbrlinkTAG</code>作为替换标记。原本计划使用<code>base64</code>后的hash值作为永久链接，但Javascript内置<code>atob()</code>生成的<code>base64</code>字串并非URL安全编码，故使用类似B站bv号的hash。<br><a href="http://blog.jvaeyhcd.wang/posts/05c9df7e0c47bd64.html" target="_blank" rel="noopener">Hexo永久链接优化</a><br><a href="http://bv2av.com/" target="_blank" rel="noopener">AV转BV参考</a></p><h3 id="HEXO生成与部署"><a href="#HEXO生成与部署" class="headerlink" title="HEXO生成与部署"></a>HEXO生成与部署</h3><p>关于Hexo基础操作，网络相关文章众多，略去不表。<br>使用Hexo+Grunt实现任务自动化。未来可以考虑加入Travis CI实现持续集成服务。<br>注意固定名称文件<code>Gruntfile.js</code>。<br><a href="https://www.jianshu.com/p/cf6d7a180aa4" target="_blank" rel="noopener">hexo使用grunt实现自动化</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;HEXO准备&quot;&gt;&lt;a href=&quot;#HEXO准备&quot; class=&quot;headerlink&quot; title=&quot;HEXO准备&quot;&gt;&lt;/a&gt;HEXO准备&lt;/h2&gt;&lt;h3 id=&quot;配置文件更改&quot;&gt;&lt;a href=&quot;#配置文件更改&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="http://www.xuediao.cf/cv1xB4C1Y7Gts4SX1Ynano.html"/>
+    <id>http://www.xuediao.cf/cv1xB4C1Y7Gts4SX1Ynano.html</id>
+    <published>2020-07-27T05:00:00.000Z</published>
+    <updated>2020-07-26T16:31:20.949Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
