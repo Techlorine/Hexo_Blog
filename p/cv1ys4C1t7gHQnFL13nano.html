@@ -17,10 +17,10 @@
     
     <meta property="og:title" content="HEXO速成" />
     
-    <meta property="og:url" content="http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html" />
+    <meta property="og:url" content="http://www.xuediao.cf/p/cv1ys4C1t7gHQnFL13nano.html" />
     
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@\@TedHuang6" />
+      <meta name="twitter:site" content="@TedHuang6" />
       <meta name="twitter:title" content="HEXO速成" />
       
         <meta name="twitter:description" content="Techlorine的临时Blog" />
@@ -34,8 +34,6 @@
   <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
   <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.2.6/dist/disqusjs.css">
   
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
@@ -51,8 +49,6 @@
   
     <script async src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
   
-  
-    <script async src="https://cdn.jsdelivr.net/npm/disqusjs@1.2.6/dist/disqus.js"></script>
   
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Techlorine's Temp Blog" type="application/atom+xml">
 </head>
@@ -124,7 +120,7 @@
                 
                 <div class="kratos-post-meta text-center">
                     <span>
-                    <i class="fa fa-calendar"></i> 2020-07-26
+                    <i class="fa fa-calendar"></i> 2020-07-27
                     <i class="fa fa-folder"></i> 分类于 
                     <i class="fa fa-user"></i> 作者 Techlorine
                     </span>
@@ -133,10 +129,53 @@
             <div class="kratos-post-content">
                 
                 <hr />
-                <h2 id="HEXO准备"><a href="#HEXO准备" class="headerlink" title="HEXO准备"></a>HEXO准备</h2><h3 id="配置文件更改"><a href="#配置文件更改" class="headerlink" title="配置文件更改"></a>配置文件更改</h3><p>先摸一个配置(<code>./_config.yml</code>)，再摸一个模板(<code>./scaffolds/pages.md</code>), 最后摸一个主题(<code>./theme</code>)。<br>主题直接<code>git clone</code>完事。<br>注意<a href="https://hexo.io/zh-cn/docs/front-matter" target="_blank" rel="noopener">Front-matter</a>中不允许带特殊符号(如@@)，否则yaml解析报错。</p>
-<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo文档</a><br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题</a><br><a href="https://candinya.com/posts/Kratos-Rebirth/" target="_blank" rel="noopener">本Blog使用主题</a>  </p>
-<h3 id="HEXO永久链接优化"><a href="#HEXO永久链接优化" class="headerlink" title="HEXO永久链接优化"></a>HEXO永久链接优化</h3><p>Hexo默认的永久链接过于冗长且对中文不友好。因此参见以下资料更改永久链接。<br>为写入模板，使用<code>TAGabbrlinkTAG</code>作为替换标记。原本计划使用<code>base64</code>后的hash值作为永久链接，但Javascript内置<code>atob()</code>生成的<code>base64</code>字串并非URL安全编码，故使用类似B站bv号的hash。<br><a href="http://blog.jvaeyhcd.wang/posts/05c9df7e0c47bd64.html" target="_blank" rel="noopener">Hexo永久链接优化</a><br><a href="http://bv2av.com/" target="_blank" rel="noopener">AV转BV参考</a></p>
-<h3 id="HEXO生成与部署"><a href="#HEXO生成与部署" class="headerlink" title="HEXO生成与部署"></a>HEXO生成与部署</h3><p>关于Hexo基础操作，网络相关文章众多，略去不表。<br>使用Hexo+Grunt实现任务自动化。未来可以考虑加入Travis CI实现持续集成服务。<br>注意固定名称文件<code>Gruntfile.js</code>。<br><a href="https://www.jianshu.com/p/cf6d7a180aa4" target="_blank" rel="noopener">hexo使用grunt实现自动化</a></p>
+                <h2 id="HEXO建站准备"><a href="#HEXO建站准备" class="headerlink" title="HEXO建站准备"></a>HEXO建站准备</h2><h3 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h3><p>为保证安全的网络连接，本站使用<code>Nginx</code>配置<code>HTTPS</code>服务器。<code>Nginx</code>兼具反向代理，管理页面解析与跳转的作用。目前使用的是<code>ubuntu 16.04</code> <code>apt</code>中自带的<code>nginx v1.10.3</code>，这个版本比较老，未来将服务器升级刀<code>ubuntu 20.04</code>后再考虑用更新的<code>nginx</code>，可能会自己手动编译。当然未来也可以尝试使用Tengine（有中文文档）。  </p>
+<p>外网上关于<code>Nginx</code>配置的资料鱼龙混杂，最好参考<a href="http://nginx.org/en/docs/http/configuring_https_servers.html" target="_blank" rel="noopener"><code>Nginx</code>官方文档</a>。但<code>Nginx</code>官方提供的默认配置在安全性上还是有所不足，没有排除不安全的<code>RC4</code>等加密算法。<strong>Mozilla</strong>提供了一个自动生成<code>SSL</code>配置的网页工具<a href="https://ssl-config.mozilla.org/" target="_blank" rel="noopener"><code>Mozilla SSL Configuration Generator</code></a>，一键在线生成合适的<code>SSL</code>配置。  </p>
+<p>此外配置<code>HTTPS</code>需要<code>SSL</code>加密证书，使用<code>Let&#39;s Encrypt</code>提供的<code>certbot-auto</code>脚本进行配置。<code>HTTP-01 challenge</code>页指向<code>Nginx</code>默认页面。<br><em>注：似乎还有DNS认证方式，操作简单很多，还能自动申请泛域名证书，参见<a href="https://www.jianshu.com/p/1eb7060c5ede" target="_blank" rel="noopener">此处</a>。</em>  </p>
+<p>80强转443跳转，使用<code>nginx-rewrite</code>，正在配置中。  </p>
+<h3 id="DNS配置"><a href="#DNS配置" class="headerlink" title="DNS配置"></a>DNS配置</h3><p>事先从<code>Freenom</code>嫖了一个域名，并将<code>Cloudflare</code>配置<code>DNS</code>解析。<br>首先，登录<code>Freenom</code>后台将自己域名的<code>DNS</code>服务器改成<code>Cloudflare</code>提供的<code>DNS</code>服务器节点。<br>随后添加<code>DNS</code>解析记录。  </p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>名称</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>@</td>
+<td>IPv4 IP</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>www</td>
+<td>@</td>
+</tr>
+<tr>
+<td>A</td>
+<td>app</td>
+<td>IPv4 IP2</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody></table>
+<h3 id="未来可以做的事情"><a href="#未来可以做的事情" class="headerlink" title="未来可以做的事情"></a>未来可以做的事情</h3><ul>
+<li>搞定<code>SSL</code>泛域名证书的</li>
+<li>配置<code>Git</code>服务器用于更新网页, 并配置几个自动任务。</li>
+<li>确定正式的网站域名之后，搞一波<code>SEO</code>优化。</li>
+<li>折腾下<code>DisqusJS</code>，恢复评论区。</li>
+<li>对网页主题的图片、字体等进行定制。</li>
+<li>给<code>Aplayer</code>添加网抑云歌单。</li>
+<li>跑路上<code>Django</code>。</li>
+<li>捉虫<code>Debug</code>。</li>
+</ul>
+<h3 id="可能有用的项目"><a href="#可能有用的项目" class="headerlink" title="可能有用的项目"></a>可能有用的项目</h3><ul>
+<li><a href="https://github.com/ciqulover/disqus-proxy" target="_blank" rel="noopener">Disqus Proxy</a>  </li>
+</ul>
 
             </div>
             
@@ -190,7 +229,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html",
+                text: "http://www.xuediao.cf/p/cv1ys4C1t7gHQnFL13nano.html",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -202,9 +241,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html";
+            const hostUrl       = "http://www.xuediao.cf/p/cv1ys4C1t7gHQnFL13nano.html";
             const title         = "「HEXO速成」";
-            const excerpt       = `HEXO准备配置文件更改先摸一个配置(./_config.yml)，再摸一个模板(./scaffolds/pages.md), 最后摸一个主题(./theme)。主题直接git clone完事。注意Front-matter中不允许带特...`;
+            const excerpt       = `HEXO建站准备Nginx配置为保证安全的网络连接，本站使用Nginx配置HTTPS服务器。Nginx兼具反向代理，管理页面解析与跳转的作用。目前使用的是ubuntu 16.04 apt中自带的nginx v1.10.3，这个版本比较...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -223,10 +262,10 @@
                 <div class="footer-tag clearfix">
                     <div class="pull-left">
                     <i class="fa fa-tags"></i>
-                        
+                        <a class="tag-link" href="/tags/hexo-nginx/" rel="tag">hexo nginx</a>
                     </div>
                     <div class="pull-date">
-                    <span>最后编辑：2020-07-26</span>
+                    <span>最后编辑：2020-07-27</span>
                     </div>
                 </div>
             </footer>
@@ -235,30 +274,12 @@
             <nav class="navigation post-navigation clearfix" role="navigation">
                 
                 <div class="nav-previous clearfix">
-                    <a title=" Hello World!" href="/cv1xB4C1Y7Gts4SX1Ynano.html">&lt; 上一篇</a>
+                    <a title=" HEXO速成" href="/p/cv1JB421n7PipWgv1rnano.html">&lt; 上一篇</a>
                 </div>
                 
                 
             </nav>
         
-        
-            <div id="disqus_thread"></div>
-<script>
-    $(function(){
-        window.DISQUS = null;
-        new DisqusJS({
-            shortname: '',
-            siteName: '',
-            identifier: 'cv1JB421n7PipWgv1rnano.html',
-            url: 'http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html',
-            api: '',
-            apikey: '',
-            admin: '',
-            adminLabel: ''
-        });
-    });
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://github.com/SukkaW/DisqusJS" target="_blank" rel="noopener">comments powered by DisqusJS.</a></noscript>
         
     </article>
 </section>
@@ -287,6 +308,13 @@
 
                 
                     
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/hexo-nginx/" style="font-size: 0.6em;">hexo nginx</a>
+      </div>
+  </aside>
+
                 
                     
   <aside id="krw-posts" class="widget widget-kratos-poststab">
@@ -294,9 +322,11 @@
   <div class="tab-content">
       <ul class="list-group">
         
-          <a class="list-group-item" href="/cv1JB421n7PipWgv1rnano.html"><i class="fa  fa-book"></i> HEXO速成</a>
+          <a class="list-group-item" href="/p/cv1ys4C1t7gHQnFL13nano.html"><i class="fa  fa-book"></i> HEXO速成</a>
         
-          <a class="list-group-item" href="/cv1xB4C1Y7Gts4SX1Ynano.html"><i class="fa  fa-book"></i> Hello World!</a>
+          <a class="list-group-item" href="/p/cv1JB421n7PipWgv1rnano.html"><i class="fa  fa-book"></i> HEXO速成</a>
+        
+          <a class="list-group-item" href="/p/cv1xB4C1Y7Gts4SX1Ynano.html"><i class="fa  fa-book"></i> Hello World!</a>
         
       </ul>
   </div>
@@ -337,7 +367,7 @@
                         
                         
                         
-                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/\@TedHuang6"><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://twitter.com/TedHuang6"><i class="fa fa-twitter"></i></a></li>
                         
                         
                         

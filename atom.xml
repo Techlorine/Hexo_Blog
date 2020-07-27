@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.xuediao.cf/"/>
-  <updated>2020-07-26T16:31:20.951Z</updated>
+  <updated>2020-07-27T17:28:31.877Z</updated>
   <id>http://www.xuediao.cf/</id>
   
   <author>
@@ -18,8 +18,32 @@
   
   <entry>
     <title>HEXO速成</title>
-    <link href="http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html"/>
-    <id>http://www.xuediao.cf/cv1JB421n7PipWgv1rnano.html</id>
+    <link href="http://www.xuediao.cf/p/cv1ys4C1t7gHQnFL13nano.html"/>
+    <id>http://www.xuediao.cf/p/cv1ys4C1t7gHQnFL13nano.html</id>
+    <published>2020-07-28T06:58:59.000Z</published>
+    <updated>2020-07-27T17:28:31.877Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HEXO建站准备"><a href="#HEXO建站准备" class="headerlink" title="HEXO建站准备"></a>HEXO建站准备</h2><h3 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h3><p>为保证安全的网络连接，本站使用<code>Nginx</code>配置<code>HTTPS</code>服务器。<code>Nginx</code>兼具反向代理，管理页面解析与跳转的作用。目前使用的是<code>ubuntu 16.04</code> <code>apt</code>中自带的<code>nginx v1.10.3</code>，这个版本比较老，未来将服务器升级刀<code>ubuntu 20.04</code>后再考虑用更新的<code>nginx</code>，可能会自己手动编译。当然未来也可以尝试使用Tengine（有中文文档）。  </p><p>外网上关于<code>Nginx</code>配置的资料鱼龙混杂，最好参考<a href="http://nginx.org/en/docs/http/configuring_https_servers.html" target="_blank" rel="noopener"><code>Nginx</code>官方文档</a>。但<code>Nginx</code>官方提供的默认配置在安全性上还是有所不足，没有排除不安全的<code>RC4</code>等加密算法。<strong>Mozilla</strong>提供了一个自动生成<code>SSL</code>配置的网页工具<a href="https://ssl-config.mozilla.org/" target="_blank" rel="noopener"><code>Mozilla SSL Configuration Generator</code></a>，一键在线生成合适的<code>SSL</code>配置。  </p><p>此外配置<code>HTTPS</code>需要<code>SSL</code>加密证书，使用<code>Let&#39;s Encrypt</code>提供的<code>certbot-auto</code>脚本进行配置。<code>HTTP-01 challenge</code>页指向<code>Nginx</code>默认页面。<br><em>注：似乎还有DNS认证方式，操作简单很多，还能自动申请泛域名证书，参见<a href="https://www.jianshu.com/p/1eb7060c5ede" target="_blank" rel="noopener">此处</a>。</em>  </p><p>80强转443跳转，使用<code>nginx-rewrite</code>，正在配置中。  </p><h3 id="DNS配置"><a href="#DNS配置" class="headerlink" title="DNS配置"></a>DNS配置</h3><p>事先从<code>Freenom</code>嫖了一个域名，并将<code>Cloudflare</code>配置<code>DNS</code>解析。<br>首先，登录<code>Freenom</code>后台将自己域名的<code>DNS</code>服务器改成<code>Cloudflare</code>提供的<code>DNS</code>服务器节点。<br>随后添加<code>DNS</code>解析记录。  </p><table><thead><tr><th>类型</th><th>名称</th><th>值</th></tr></thead><tbody><tr><td>A</td><td>@</td><td>IPv4 IP</td></tr><tr><td>CNAME</td><td>www</td><td>@</td></tr><tr><td>A</td><td>app</td><td>IPv4 IP2</td></tr><tr><td>…</td><td>…</td><td>…</td></tr></tbody></table><h3 id="未来可以做的事情"><a href="#未来可以做的事情" class="headerlink" title="未来可以做的事情"></a>未来可以做的事情</h3><ul><li>搞定<code>SSL</code>泛域名证书的</li><li>配置<code>Git</code>服务器用于更新网页, 并配置几个自动任务。</li><li>确定正式的网站域名之后，搞一波<code>SEO</code>优化。</li><li>折腾下<code>DisqusJS</code>，恢复评论区。</li><li>对网页主题的图片、字体等进行定制。</li><li>给<code>Aplayer</code>添加网抑云歌单。</li><li>跑路上<code>Django</code>。</li><li>捉虫<code>Debug</code>。</li></ul><h3 id="可能有用的项目"><a href="#可能有用的项目" class="headerlink" title="可能有用的项目"></a>可能有用的项目</h3><ul><li><a href="https://github.com/ciqulover/disqus-proxy" target="_blank" rel="noopener">Disqus Proxy</a>  </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;HEXO建站准备&quot;&gt;&lt;a href=&quot;#HEXO建站准备&quot; class=&quot;headerlink&quot; title=&quot;HEXO建站准备&quot;&gt;&lt;/a&gt;HEXO建站准备&lt;/h2&gt;&lt;h3 id=&quot;Nginx配置&quot;&gt;&lt;a href=&quot;#Nginx配置&quot; class=&quot;header
+      
+    
+    </summary>
+    
+    
+    
+      <category term="hexo nginx" scheme="http://www.xuediao.cf/tags/hexo-nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HEXO速成</title>
+    <link href="http://www.xuediao.cf/p/cv1JB421n7PipWgv1rnano.html"/>
+    <id>http://www.xuediao.cf/p/cv1JB421n7PipWgv1rnano.html</id>
     <published>2020-07-27T06:57:59.000Z</published>
     <updated>2020-07-26T16:31:20.951Z</updated>
     
@@ -40,8 +64,8 @@
   
   <entry>
     <title>Hello World!</title>
-    <link href="http://www.xuediao.cf/cv1xB4C1Y7Gts4SX1Ynano.html"/>
-    <id>http://www.xuediao.cf/cv1xB4C1Y7Gts4SX1Ynano.html</id>
+    <link href="http://www.xuediao.cf/p/cv1xB4C1Y7Gts4SX1Ynano.html"/>
+    <id>http://www.xuediao.cf/p/cv1xB4C1Y7Gts4SX1Ynano.html</id>
     <published>2020-07-27T05:00:00.000Z</published>
     <updated>2020-07-26T16:31:20.949Z</updated>
     
